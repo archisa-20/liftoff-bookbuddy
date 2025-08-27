@@ -2,15 +2,29 @@
 
 Modern digital library starter with authentication, protected routes, pricing, and a mock/real payment flow. Built with Vite, React, TypeScript, shadcn-ui, and Tailwind CSS.
 
+<img width="1823" height="899" alt="image" src="https://github.com/user-attachments/assets/e1a28f69-9fb2-4abd-9f21-d1cb6dd5cef5" />
+
 ### Features
 
 - Email/password authentication with Supabase integration
+  <img width="1840" height="803" alt="image" src="https://github.com/user-attachments/assets/97640021-a966-476e-892d-1fd6d8e23786" />
+
 - Mock authentication mode for local prototyping (no external services required)
+  <img width="846" height="665" alt="image" src="https://github.com/user-attachments/assets/cfe98f51-5034-46f0-93bc-df792548194a" />
+
 - Protected routes via a `ProtectedRoute` component
 - Pricing page with plan selection and a payment modal
+  <img width="758" height="884" alt="image" src="https://github.com/user-attachments/assets/09e6ec17-7374-4cbb-a6ba-25a9c5216dc1" />
+
 - Mock payment flow that marks users as Pro and redirects to a success page
+  <img width="318" height="582" alt="image" src="https://github.com/user-attachments/assets/fc708530-a8b0-49a6-8fbc-dc289be9aaec" />
+  <img width="1821" height="890" alt="image" src="https://github.com/user-attachments/assets/139d8a9f-6c49-4034-8b17-2101433ba958" />
+
 - Stripe Payment Links support for production checkout
 - Account page and basic dashboard
+  <img width="1741" height="301" alt="image" src="https://github.com/user-attachments/assets/9e35a77f-9d2b-49fe-97b8-30c2d4367093" />
+<img width="1803" height="879" alt="image" src="https://github.com/user-attachments/assets/93049e01-3c3b-4cc1-a897-2eb229938dad" />
+
 - Responsive UI powered by shadcn-ui and Tailwind CSS
 
 ### Tech Stack
@@ -32,8 +46,8 @@ Modern digital library starter with authentication, protected routes, pricing, a
 ### Installation
 
 ```sh
-git clone <REPO_URL>
-cd <PROJECT_DIR>
+git clone https://github.com/archisa-20/liftoff-bookbuddy.git
+cd liftoff-bookbuddy
 npm install
 ```
 
@@ -45,7 +59,7 @@ Run the dev server:
 npm run dev
 ```
 
-Open the app at `http://localhost:8081/`.
+Open the app in your browser at the URL shown in your terminal (usually `http://localhost:5173/`).
 
 Key routes:
 - `/login`, `/signup` — auth pages
@@ -164,7 +178,3 @@ You can deploy the `dist/` folder to any static hosting provider (e.g., Netlify,
 - `npm run preview` — preview the production build locally
 
 ---
-
-## License
-
-MIT
