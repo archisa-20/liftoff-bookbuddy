@@ -17,8 +17,7 @@ Modern digital library starter with authentication, protected routes, pricing, a
   <img width="758" height="884" alt="image" src="https://github.com/user-attachments/assets/09e6ec17-7374-4cbb-a6ba-25a9c5216dc1" />
 
 - Mock payment flow that marks users as Pro and redirects to a success page
-  <img width="318" height="582" alt="image" src="https://github.com/user-attachments/assets/fc708530-a8b0-49a6-8fbc-dc289be9aaec" />
-  <img width="1821" height="890" alt="image" src="https://github.com/user-attachments/assets/139d8a9f-6c49-4034-8b17-2101433ba958" />
+  <img width="318" height="582" alt="image" src="https://github.com/user-attachments/assets/fc708530-a8b0-49a6-8fbc-dc289be9aaec" /><img width="1821" height="890" alt="image" src="https://github.com/user-attachments/assets/139d8a9f-6c49-4034-8b17-2101433ba958" />
 
 - Stripe Payment Links support for production checkout
 - Account page and basic dashboard
