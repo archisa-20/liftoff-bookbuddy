@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BookBuddy Design System - Royal Mystical Library Dark Academia */
+
+@layer base {
+  :root {
+    /* Core Royal Mystical Palette */
+    --midnight-navy: 218 42% 12%;
+    --forest-green: 152 45% 15%;
+    --aubergine: 310 25% 20%;
+    --charcoal: 220 13% 18%;
+    
+    /* Accent Colors */
+    --muted-gold: 45 65% 68%;
+    --warm-gold: 43 74% 75%;
+    --rich-gold: 48 88% 62%;
+    --warm-cream: 48 20% 95%;
+    --soft-cream: 45 15% 92%;
+    
+    /* Depth & Texture */
+    --velvet-dark: 230 35% 7%;
+    --marble-light: 50 12% 88%;
+    --parchment: 48 15% 90%;
+    
+    /* Shadcn Integration */
+    --background: var(--velvet-dark);
+    --foreground: var(--warm-cream);
+    
+    --card: var(--charcoal);
+    --card-foreground: var(--soft-cream);
+    
+    --popover: var(--charcoal);
+    --popover-foreground: var(--soft-cream);
+    
+    --primary: var(--muted-gold);
+    --primary-foreground: var(--midnight-navy);
+    
+    --secondary: var(--aubergine);
+    --secondary-foreground: var(--warm-cream);
+    
+    --muted: 220 13% 25%;
+    --muted-foreground: 45 15% 75%;
+    
+    --accent: var(--forest-green);
+    --accent-foreground: var(--warm-cream);
+    
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: var(--warm-cream);
+    
+    --border: 220 13% 25%;
+    --input: 220 13% 22%;
+    --ring: var(--muted-gold);
+    
+    --radius: 0.75rem;
+    
+    /* Custom Design Tokens */
+    --gradient-royal: linear-gradient(135deg, hsl(var(--midnight-navy)), hsl(var(--aubergine)));
+    --gradient-mystical: linear-gradient(120deg, hsl(152 65% 45%), hsl(218 80% 55%));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--muted-gold)), hsl(var(--rich-gold)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--charcoal)), hsl(220 13% 15%));
+    
+    /* Shadows & Glows */
+    --shadow-royal: 0 10px 40px -12px hsl(var(--midnight-navy) / 0.6);
+    --shadow-mystical: 0 20px 60px -15px hsl(var(--aubergine) / 0.4);
+    --shadow-elegant: 0 8px 32px -8px hsl(220 13% 10% / 0.5);
+    --glow-gold: 0 0 30px hsl(var(--muted-gold) / 0.3);
+    --glow-soft: 0 0 20px hsl(var(--warm-cream) / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-elegant: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Light mode adjustments for contrast */
+  .light {
+    --background: var(--warm-cream);
+    --foreground: var(--midnight-navy);
+    --card: var(--soft-cream);
+    --card-foreground: var(--charcoal);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+  
+  /* Typography Hierarchy */
+  .heading-hero {
+    @apply font-playfair text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .heading-primary {
+    @apply font-playfair text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight;
+    color: hsl(var(--warm-cream));
+  }
+  
+  .heading-secondary {
+    @apply font-playfair text-xl md:text-2xl font-medium;
+    color: hsl(var(--muted-gold));
+  }
+  
+  .body-elegant {
+    @apply font-inter text-sm md:text-base leading-relaxed;
+    color: hsl(var(--muted-foreground));
+  }
+  
+  .text-accent-gold {
+    color: hsl(var(--muted-gold));
+  }
+  
+  .text-mystical {
+    background: var(--gradient-mystical);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer components {
+  /* Royal Card Styles */
+  .card-royal {
+    @apply rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm;
+    box-shadow: var(--shadow-elegant);
+    transition: var(--transition-elegant);
+  }
+  
+  .card-royal:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-mystical);
+  }
+  
+  /* Mystical Backgrounds */
+  .bg-royal {
+    background: var(--gradient-royal);
+  }
+  
+  .bg-mystical {
+    background: var(--gradient-mystical);
+  }
+  
+  .bg-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  /* Golden Flourish Dividers */
+  .divider-flourish {
+    @apply relative flex items-center justify-center py-8;
+  }
+  
+  .divider-flourish::before {
+    content: '';
+    @apply absolute left-0 top-1/2 h-px bg-gradient-to-r from-transparent via-muted-gold to-transparent;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  
+  .divider-flourish::after {
+    content: '❋';
+    @apply bg-background px-4 text-xl;
+    color: hsl(var(--muted-gold));
+  }
+  
+  /* Elegant Hover Effects */
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--glow-gold);
+    transform: scale(1.02);
+  }
+  
+  /* Mystical Gradients */
+  .gradient-text-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-mystical {
+    background: var(--gradient-mystical);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Floating Elements */
+  .float-elegant {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-gold) / 0.4);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-gold) / 0.6);
+  }
+}
