@@ -1,7 +1,7 @@
 ## BookBuddy — Digital Library Starter
 
 ##  Live Demo
-[Check out the live site here](https://liftoff-bokkbuddy.netlify.app/)
+[Check out the live site here](https://liftoff-bookbuddy.netlify.app/)
 
 
 Modern digital library starter with authentication, protected routes, pricing, and a mock/real payment flow. Built with Vite, React, TypeScript, shadcn-ui, and Tailwind CSS.
